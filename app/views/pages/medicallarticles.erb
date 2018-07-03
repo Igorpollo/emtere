@@ -1,0 +1,23 @@
+<h1>Artigos</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Titulo</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @artigos.each do |artigo| %>
+      <tr>
+        <td><%= artigo.titulo %></td>
+        <td><%= link_to 'Ver', artigo %></td>
+        <td><%= link_to 'Editar', edit_artigo_path(artigo) %></td>
+        <td><%= link_to 'Deletar', artigo, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>

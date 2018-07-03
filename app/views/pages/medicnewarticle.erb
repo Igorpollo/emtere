@@ -1,0 +1,36 @@
+<main role="main" class="container" style="padding-top: 30px;">
+
+<%= simple_form_for(@artigo) do |f| %>
+  <%= f.error_notification %>
+  <%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
+
+  <div class="form-inputs">
+    <%= f.input :titulo %>
+    <div class="form-group text optional artigo_texto">
+        <label class="form-control-label text optional" for="artigo_texto">Texto</label>
+        <textarea name="artigo[texto]" id="editor">
+            <p>Here goes the initial content of the editor.</p>
+        </textarea>
+        </div>
+  </div>
+
+  <div class="form-actions">
+    <%= f.button :submit %>
+  </div>
+<% end %>
+
+
+        
+
+    </main><!-- /.container -->
+    <script src="https://cdn.ckeditor.com/ckeditor5/10.0.1/classic/ckeditor.js"></script>
+    <script>
+    ClassicEditor
+    .create( document.querySelector( '#editor' ) )
+    .then( editor => {
+        console.log( editor );
+    } )
+    .catch( error => {
+        console.error( error );
+    } );
+    </script>

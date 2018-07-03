@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Emtere</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+    <link rel="stylesheet" media="all" href="/assets/bootstrap.min.css">
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+    <p class="notice"><%= notice %></p>
+    <p class="alert"><%= alert %></p>
+     <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
+      <a class="navbar-brand" href="#">Admin</a>
+            <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="/medic/allarticles">Artigos</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/medic/newarticle">Novo Artigo</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link disabled" href="#">Meus dados</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <%= yield %>
+  </body>
+</html>
