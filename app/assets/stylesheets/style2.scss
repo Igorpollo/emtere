@@ -751,7 +751,7 @@ textarea:focus {
 	margin-top:-130px;
 }
 .cc_main_slide1{
-	background-image: url(asset_path('fundoteste.jpg'));
+	background-image: url(asset_url('fundoteste.jpg'));
 	width:100%;
 	height:880px;
 	background-size:cover;
@@ -760,7 +760,7 @@ textarea:focus {
 	padding-top:470px;
 }
 .cc_main_slide2{
-	background:url(asset_path('slider_img2.jpg')) 50% 0 repeat-y;
+	background:url(asset_url('slider_img2.jpg')) 50% 0 repeat-y;
 	width:100%;
 	height:880px;
 	background-size:cover;
@@ -769,7 +769,7 @@ textarea:focus {
 	padding-top:470px;
 }
 .cc_main_slide3{
-	background:url(asset_path('slider_img3.jpg')) 50% 0 repeat-y;
+	background:url(asset_url('slider_img3.jpg')) 50% 0 repeat-y;
 	width:100%;
 	height:880px;
 	background-size:cover;
@@ -1148,7 +1148,7 @@ color: #777777;
 }
 /*************------appointment wrapper----------***********/
 .appoint_wrapper{
-	background:url(asset_path('appoint_img.jpg')) 50% 0 repeat-y;
+	background:url(asset_url('appoint_img.jpg')) 50% 0 repeat-y;
 	float:left;
 	width:100%;
 	height:100%;
@@ -1293,7 +1293,7 @@ color: #777777;
 }
 /************--------choose wrapper-------***************/
 .choose_wrapper{
-	background:url(asset_path('choose_bg.jpg')) 50% 0 repeat-y;
+	background:url(asset_url('choose_bg.jpg')) 50% 0 repeat-y;
 	float:left;
 	width:100%;
 	height:100%;
@@ -1703,7 +1703,7 @@ color: #777777;
 }
 /*********---------vedio wrapper---------***********/
 .vedio_wrapper{
-	background:url(asset_path('vedio.jpg')) 50% 0 repeat-y;
+	background:url(asset_url('vedio.jpg')) 50% 0 repeat-y;
 	float:left;
 	width:100%;
 	height:100%;
@@ -1962,7 +1962,7 @@ color: #777777;
 }
 /*********----------counter wrapper--------***********/
 .counter_section{
-	background: url(asset_path('counter_bg.jpg')) 50% 0 repeat-y;
+	background: url(asset_url('counter_bg.jpg')) 50% 0 repeat-y;
     top: 0;
     left: 0;
     width: 100%;
@@ -2144,7 +2144,7 @@ color: #777777;
 }
 /**********--------testimonial wrapper------*************/
 .testimonial_wrapper{
-	background:url(asset_path('testimonial_bg.jpg')) 50% 0 repeat-y;
+	background:url(asset_url('testimonial_bg.jpg')) 50% 0 repeat-y;
 	float:left;
 	width:100%;
 	height:100%;
@@ -2840,7 +2840,7 @@ color: #777777;
 /***********----------services css start----------**********/
 /*----------title section---------------*/
 .med_tittle_section{
-	background:url(asset_path('service_top_img.jpg')) 50% 0 repeat-y;
+	background:url(asset_url('service_top_img.jpg')) 50% 0 repeat-y;
 	width:100%;
 	height:100%;
 	background-position:center 0;
@@ -3863,7 +3863,7 @@ th {
 	color:#000000;
 }
 .speacilist_team_section{
-	background:url(asset_path('speacialist.jpg')) 50% 0 repeat-y;
+	background:url(asset_url('speacialist.jpg')) 50% 0 repeat-y;
 	float:left;
 	width:100%;
 	height:100%;
@@ -4282,7 +4282,7 @@ th {
 }
 /********------contact us section------**********/
 .contact_us_section{
-	background:url(asset_path('contact_us_bg.jpg'));
+	background:url(asset_url('contact_us_bg.jpg'));
 	float:left;
 	width:100%;
 	background-position:center 0;
@@ -5256,7 +5256,7 @@ th {
 	margin-top:-30px;
 }
 .top_service_wrapper{
-	background: url(asset_path('top_service_img.jpg')) 50% 0 repeat-y;
+	background: url(asset_url('top_service_img.jpg')) 50% 0 repeat-y;
     top: 0;
     left: 0;
     width: 100%;
