@@ -1,5 +1,7 @@
 {
   "name": "emtere",
   "private": true,
-  "dependencies": {}
+  "dependencies": {
+    "yarn": "^1.7.0"
+  }
 }
