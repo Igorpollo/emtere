@@ -14,7 +14,7 @@
     <meta name="author" content="" />
     <meta name="MobileOptimized" content="320" />
      <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
     <!-- favicon link-->
     <link rel="shortcut icon" type="image/icon" href="assets/faviconemt.jpeg" />
 </head>
@@ -293,7 +293,6 @@
     </div>
     <!--footer wrapper end-->
     <!--main js files-->
-<%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
     <!--js code-->
     <script>
         function initMap() {
