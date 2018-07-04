@@ -13,17 +13,8 @@
     <meta name="keywords" content="medical/IMEDICO/hospital" />
     <meta name="author" content="" />
     <meta name="MobileOptimized" content="320" />
-    <!-- style -->
-    <link rel="stylesheet" type="text/css" href="assets/animate.css">
-    <link rel="stylesheet" type="text/css" href="assets/bootstrap2.min.css">
-    <link rel="stylesheet" type="text/css" href="assets/font-awesome.min.css">
-    <link rel="stylesheet" type="text/css" href="assets/owl.carousel.css">
-    <link rel="stylesheet" type="text/css" href="assets/magnific-popup.css">
-    <link rel="stylesheet" type="text/css" href="assets/owl.theme.default.css">
-    <link rel="stylesheet" type="text/css" href="assets/flaticon.css">
-    <link rel="stylesheet" type="text/css" href="assets/fonts.css" />
-    <link rel="stylesheet" type="text/css" href="assets/style2.css">
-	<link rel="stylesheet" type="text/css" href="assets/responsive.css" />
+     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    
     <!-- favicon link-->
     <link rel="shortcut icon" type="image/icon" href="assets/faviconemt.jpeg" />
 </head>
@@ -297,14 +288,7 @@
     </div>
     <!--footer wrapper end-->
     <!--main js files-->
-    <script src="assets/jquery_min.js"></script>
-    <script src="assets/bootstrap.min.js"></script>
-    <script src="assets/jquery.countTo.js"></script>
-    <script src="assets/jquery.inview.min.js"></script>
-    <script src="assets/wow.min.js"></script>
-    <script src="assets/owl.carousel.js"></script>
-    <script src="assets/jquery.magnific-popup.js"></script>
-    <script src="assets/custom.js"></script>
+<%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
     <!--js code-->
     <script>
         function initMap() {
