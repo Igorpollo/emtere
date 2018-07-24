@@ -29,7 +29,15 @@ class ArtigosController < ApplicationController
 
     respond_to do |format|
       if @artigo.save
-        format.html { redirect_to @artigo, notice: 'Artigo was successfully created.' }
+        auth = {
+          cloud_name: "flampic",
+          api_key:    '333169189687311',
+          api_secret: "kqXVte1LTbMllETzF9MySTOHUds"
+        }
+        @cloudUp = Cloudinary::Uploader.upload(@artigo.capa.path, auth)
+        @artigo.cloudname = @cloudUp["public_id"]
+        @artigo.save
+        format.html { redirect_to @artigo, notice: 'Artigo criado com sucesso.' }
         format.json { render :show, status: :created, location: @artigo }
       else
         format.html { render :new }
@@ -43,7 +51,7 @@ class ArtigosController < ApplicationController
   def update
     respond_to do |format|
       if @artigo.update(artigo_params)
-        format.html { redirect_to @artigo, notice: 'Artigo was successfully updated.' }
+        format.html { redirect_to @artigo, notice: 'Artigo atualizado.' }
         format.json { render :show, status: :ok, location: @artigo }
       else
         format.html { render :edit }
@@ -57,7 +65,7 @@ class ArtigosController < ApplicationController
   def destroy
     @artigo.destroy
     respond_to do |format|
-      format.html { redirect_to artigos_url, notice: 'Artigo was successfully destroyed.' }
+      format.html { redirect_to artigos_url, notice: 'Artigo excluido com sucesso.' }
       format.json { head :no_content }
     end
   end
@@ -70,6 +78,6 @@ class ArtigosController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def artigo_params
-      params.require(:artigo).permit(:titulo, :texto, :user_id)
+      params.require(:artigo).permit(:titulo, :texto, :user_id, :capa, :cloudname)
     end
 end

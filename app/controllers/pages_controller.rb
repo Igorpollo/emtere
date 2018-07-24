@@ -14,6 +14,18 @@ class PagesController < ApplicationController
         render layout: "medic"
     end
 
+    def aboutus
+    end
+
+    def galeria
+    end
+
+    def services
+    end
+
+    def medicos
+    end
+
     def login
         render layout: "login"
     end

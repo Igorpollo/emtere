@@ -1,15 +1,22 @@
-<main role="main" class="container" style="padding-top: 30px;">
+<main role="main" id="artigo" class="container" style="padding-top: 30px;">
 
-<%= simple_form_for(@artigo) do |f| %>
+<%= simple_form_for @artigo, html: {multipart: true} do |f| %>
   <%= f.error_notification %>
   <%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
 
   <div class="form-inputs">
     <%= f.input :titulo %>
+    <div class="form-group file optional artigo_capa">
+    <label class="file optional" for="artigo_capa">Adicione uma imagem ao artigo</label>
+    <input class="form-control-file file optional" @change="onFileChange" type="file" name="artigo[capa]" id="artigo_capa">
+    </div>
+    <div style="max-width: 500px; max-height: 350px;">
+    <img style="max-width: 300px; max-height: 260px;" v-if="url" :src="url" />
+  </div>
     <div class="form-group text optional artigo_texto">
         <label class="form-control-label text optional" for="artigo_texto">Texto</label>
         <textarea name="artigo[texto]" id="editor">
-            <p>Here goes the initial content of the editor.</p>
+            <p>Escreva seu texto aqui.</p>
         </textarea>
         </div>
   </div>
@@ -23,6 +30,7 @@
         
 
     </main><!-- /.container -->
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
     <script src="https://cdn.ckeditor.com/ckeditor5/10.0.1/classic/ckeditor.js"></script>
     <script>
     ClassicEditor
@@ -33,4 +41,20 @@
     .catch( error => {
         console.error( error );
     } );
+    </script>
+    <script>
+    const vm = new Vue({
+  el: '#artigo',
+  data() {
+    return {
+      url: null,
+    }
+  },
+  methods: {
+    onFileChange(e) {
+      const file = e.target.files[0];
+      this.url = URL.createObjectURL(file);
+    }
+  }
+})
     </script>
