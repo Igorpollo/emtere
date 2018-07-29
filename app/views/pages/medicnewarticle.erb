@@ -13,13 +13,9 @@
     <div style="max-width: 500px; max-height: 350px;">
     <img style="max-width: 300px; max-height: 260px;" v-if="url" :src="url" />
   </div>
-    <div class="form-group text optional artigo_texto">
-        <label class="form-control-label text optional" for="artigo_texto">Texto</label>
-        <textarea name="artigo[texto]" id="editor">
-            <p>Escreva seu texto aqui.</p>
-        </textarea>
-        </div>
+   
   </div>
+  <%= f.input :texto, as: :ckeditor, input_html: { ckeditor: { toolbar: 'mini' } } %>
 
   <div class="form-actions">
     <%= f.button :submit %>
@@ -31,30 +27,3 @@
 
     </main><!-- /.container -->
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
-    <script src="https://cdn.ckeditor.com/ckeditor5/10.0.1/classic/ckeditor.js"></script>
-    <script>
-    ClassicEditor
-    .create( document.querySelector( '#editor' ) )
-    .then( editor => {
-        console.log( editor );
-    } )
-    .catch( error => {
-        console.error( error );
-    } );
-    </script>
-    <script>
-    const vm = new Vue({
-  el: '#artigo',
-  data() {
-    return {
-      url: null,
-    }
-  },
-  methods: {
-    onFileChange(e) {
-      const file = e.target.files[0];
-      this.url = URL.createObjectURL(file);
-    }
-  }
-})
-    </script>

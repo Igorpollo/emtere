@@ -16,7 +16,7 @@
   </head>
 
   <body class="text-center">
-    <form class="form-signin" action="/users/sign_in" method="post">
+    <form class="form-signin" action="/users" method="post" enctype="multipart/form-data">
     <%= token_tag %>
       <img class="mb-4" src="/assets/URSO_EDITADO.png" alt="" width="150">
       <h4 class=" mb-3 font-weight-normal">Administrativo Espaço Médico</h4>
@@ -24,13 +24,25 @@
       <input type="email" id="inputEmail" name="user[email]" class="form-control" placeholder="Email" required autofocus>
       <label for="inputPassword" class="sr-only">Senha</label>
       <input type="password" name="user[password]" id="inputPassword" class="form-control" placeholder="Senha" required>
+      <label for="inputEmail" class="sr-only">Nome</label>
+      <input type="text" name="user[nome]" class="form-control" placeholder="Nome" required>
+            <label for="inputEmail" class="sr-only">Especialidade</label>
+      <input type="text" name="user[especialidade]" class="form-control" placeholder="Especialidade" required>
+            <label for="inputEmail" class="sr-only">CRM</label>
+      <input type="text" name="user[crm]" class="form-control" placeholder="CRM" required >
+            <label for="inputEmail" class="sr-only">Resumo</label>
+      <textarea name="user[resumo]" class="form-control" placeholder="Escreva um resumo sobre você" required></textarea>
+      <label for="file" class="sr-only">Foto</label>
+      <p>Insira sua foto</p>
+      <input type="file" id="file" name="user[avatar]" class="form-control" placeholder="Insira sua foto" required >
+
       <div class="checkbox mb-3">
         <label>
           <input name="user[remember_me]" type="checkbox" value="remember-me"> Lembrar
         </label>
       </div>
       <button class="btn btn-lg btn-primary btn-block" type="submit">Entrar</button>
-      <p style="margin-top: 30px;"><a href="/registrar">Registrar</a></p>
+      <p style="margin-top: 30px;"><a href="#">Registrar</a></p>
     </form>
   </body>
 </html>

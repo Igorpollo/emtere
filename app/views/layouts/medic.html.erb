@@ -13,14 +13,17 @@
       <a class="navbar-brand" href="#">Admin</a>
             <div class="collapse navbar-collapse" id="navbarsExampleDefault">
         <ul class="navbar-nav mr-auto">
-          <li class="nav-item active">
+          <li class="nav-item">
             <a class="nav-link" href="/medic/allarticles">Artigos</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="/medic/newarticle">Novo Artigo</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link disabled" href="#">Meus dados</a>
+            <a class="nav-link disabled" href="#">Meus perfil</a>
+          </li>
+          <li class="nav-item">
+            <%= link_to('Logout', destroy_user_session_path, method: :delete, class:'nav-link') %>        
           </li>
         </ul>
       </div>

@@ -1,5 +1,5 @@
 class PagesController < ApplicationController
-    before_action :authenticate_user!, only: [:medicadmin]
+    before_action :authenticate2_user!, only: [:medicadmin, :medicallarticles, :medicnewarticle]
     def index
         @artigos = Artigo.all
     end
@@ -28,5 +28,9 @@ class PagesController < ApplicationController
 
     def login
         render layout: "login"
+    end
+
+    def register
+        render layout: "register"
     end
 end

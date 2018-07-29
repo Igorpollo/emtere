@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_07_06_002047) do
+ActiveRecord::Schema.define(version: 2018_07_29_005117) do
 
   create_table "artigos", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "titulo"
@@ -22,6 +22,19 @@ ActiveRecord::Schema.define(version: 2018_07_06_002047) do
     t.string "capa"
     t.string "cloudname"
     t.index ["user_id"], name: "index_artigos_on_user_id"
+  end
+
+  create_table "ckeditor_assets", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.string "data_id", null: false
+    t.string "data_filename", null: false
+    t.integer "data_size"
+    t.string "data_content_type"
+    t.string "type", limit: 30
+    t.integer "width"
+    t.integer "height"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["type"], name: "index_ckeditor_assets_on_type"
   end
 
   create_table "eventos", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
@@ -62,6 +75,7 @@ ActiveRecord::Schema.define(version: 2018_07_06_002047) do
     t.string "last_sign_in_ip"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "avatar"
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end

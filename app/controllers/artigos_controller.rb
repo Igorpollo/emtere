@@ -4,7 +4,7 @@ class ArtigosController < ApplicationController
   # GET /artigos
   # GET /artigos.json
   def index
-    @artigos = Artigo.all
+    @artigos = Artigo.all.reverse_order
   end
 
   # GET /artigos/1
