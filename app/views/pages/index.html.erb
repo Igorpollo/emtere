@@ -1,9 +1,9 @@
-    <!-- preloader Start -->
-    <div id="preloader">
-        <div id="status">
-        <%= image_tag("preloader.gif", id: "perloader_image")%>
-        </div>
+<!-- preloader Start -->
+<div id="preloader">
+    <div id="status">
+    <%= image_tag("preloader.gif", id: "perloader_image")%>
     </div>
+</div>
 <!--slider wrapper start-->
 <div class="slider_main_wrapper">
     <div class="cc_slider_img_section">
@@ -19,7 +19,7 @@
                                     <h2 style="color: #FFF;" data-animation-in="fadeInDown" data-animation-out="animate-out fadeOutDown">O Espaço Médico Terê</h2>
                                     <p style="color: #FFF;" data-animation-in="zoomIn" data-animation-out="animate-out zoomIn">Localizado no coração de Teresópolis, no moderno Centro Empresarial Cosmopolitan Office, contamos com salas equipadas para atendimento médico pediátrico e adulto. Com uma equipe profissional multidisciplinar, zelamos pela sua saúde e bem estar, e de sua família com muito carinho e segurança.</p>
                                     <ul>
-                                        <li style="color: #FFF;" data-animation-in="bounceInLeft" data-animation-out="animate-out bounceOutLeft"><a style="color: #FFF;" href="#">Leia mais</a></li>
+                                        <li style="color: #FFF;" data-animation-in="bounceInLeft" data-animation-out="animate-out bounceOutLeft"><a style="color: #FFF;" href="/sobre">Leia mais</a></li>
                                     </ul>
                                 </div>
                             </div>
@@ -166,184 +166,31 @@
                 <div class="owl-carousel owl-theme">
                 <div class="item">
                 <div class="row">
+                    <% @users.each do |medico| %>
                     <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
-                    <div class="team_about">
-                        <div class="team_icon_wrapper">
-                            <i class="fa fa-user-md" style="top: 50px; left: 20px; position: absolute; font-size: 40px; color: #FFF"></i>
-                        </div>
-                        <div class="team_img">
-                            <%= image_tag("mari.jpg", class: "img-responsive")%>							</div>
-                        <div class="team_txt">
-                            <h1><a href="#">Dra. Mariana Thomé</a></h1>
-                            <p>Pediatra</p>
-                        </div>
-                        <div class="team_icon_hover our_doc_icn_hovr">
-                            <ul>
-                                <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
-                                <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
-                                <li><a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
-                                <li><a href="#"><i class="fa fa-youtube-play" aria-hidden="true"></i></a></li>
-                            </ul>
-                        </div>
-                    </div>
-            </div>
-            <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 hidden-xs hidden-sm">
-                <div class="team_about">
-                    <div class="team_icon_wrapper">
-                        <i class="fa fa-user-md" style="top: 50px; left: 20px; position: absolute; font-size: 40px; color: #FFF"></i></div>
-                    <div class="team_img">
-                        <%= image_tag("cbertolini.jpg", class: "img-responsive")%>
-                    </div>
-                    <div class="team_txt">
-                        <h1><a href="#">Dra. Mariana Thomé</a></h1>
-                        <p>Pediatra</p>
-                    </div>
-                    <div class="team_icon_hover our_doc_icn_hovr">
-                        <ul>
-                            <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
-                            <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
-                            <li><a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
-                            <li><a href="#"><i class="fa fa-youtube-play" aria-hidden="true"></i></a></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 hidden-xs">
-                <div class="team_about">
-                    <div class="team_icon_wrapper">
-                        <i class="fa fa-user-md" style="top: 50px; left: 20px; position: absolute; font-size: 40px; color: #FFF"></i></div>
-                    <div class="team_img">
-                        <%= image_tag("gbernardo.jpg", class: "img-resposive", style: "height: 330px;")%>
-                    </div>
-                    <div class="team_txt">
-                        <h1><a href="#">Dra. Mariana Thomé</a></h1>
-                        <p>Pediatra</p>
-                    </div>
-                    <div class="team_icon_hover our_doc_icn_hovr">
-                        <ul>
-                            <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
-                            <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
-                            <li><a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
-                            <li><a href="#"><i class="fa fa-youtube-play" aria-hidden="true"></i></a></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 hidden-xs hidden-sm">
-                <div class="team_about">
-                    <div class="team_icon_wrapper">
-                        <i class="fa fa-user-md" style="top: 50px; left: 20px; position: absolute; font-size: 40px; color: #FFF"></i></div>
-                    <div class="team_img">
-                            <%= image_tag("idrummond.jpg", class: "img-resposive")%>
-                    </div>
-                    <div class="team_txt">
-                        <h1><a href="#">Dra. Mariana Thomé</a></h1>
-                        <p>Pediatra</p>
-                    </div>
-                    <div class="team_icon_hover our_doc_icn_hovr">
-                        <ul>
-                            <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
-                            <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
-                            <li><a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
-                            <li><a href="#"><i class="fa fa-youtube-play" aria-hidden="true"></i></a></li>
-                            </ul>
-                    </div>
-                </div>
-            </div>
-            </div>
-            </div>
-            <div class="item">
-                <div class="row">
-                <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 hidden-xs hidden-sm">
-                <div class="team_about">
-                    <div class="team_icon_wrapper">
-                            <i class="fa fa-user-md" style="top: 50px; left: 20px; position: absolute; font-size: 40px; color: #FFF"></i>
+                        <div class="team_about">
+                            <div class="team_icon_wrapper">
+                                <i class="fa fa-user-md" style="top: 50px; left: 20px; position: absolute; font-size: 40px; color: #FFF"></i>
                             </div>
-                    <div class="team_img">
-                        <%= image_tag("jsantos.jpg", class: "img-resposive")%>
+                            <div class="team_img">
+                                <%= cl_image_tag(medico.avatar, :width => 262, :height => 330) %>
+                            </div>
+                            <div class="team_txt">
+                                <h1><a href="#"><%= medico.nome %></a></h1>
+                                <p><%= medico.especialidade %></p>
+                            </div>
+                            <div class="team_icon_hover our_doc_icn_hovr">
+                                <ul>
+                                    <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+                                    <li><a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
+                                    <li><a href="#"><i class="fa fa-youtube-play" aria-hidden="true"></i></a></li>
+                                </ul>
+                            </div>
+                        </div>
                     </div>
-                    <div class="team_txt">
-                        <h1><a href="#">Dra. Mariana Thomé</a></h1>
-                        <p>Pediatra</p>
-                    </div>
-                    <div class="team_icon_hover our_doc_icn_hovr">
-                        <ul>
-                            <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
-                            <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
-                            <li><a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
-                            <li><a href="#"><i class="fa fa-youtube-play" aria-hidden="true"></i></a></li>
-                        </ul>
-                    </div>
-                </div>
+                    <% end %>
             </div>
-            <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 hidden-xs">
-                <div class="team_about">
-                    <div class="team_icon_wrapper">
-                        <i class="fa fa-user-md" style="top: 50px; left: 20px; position: absolute; font-size: 40px; color: #FFF"></i>
-                    </div>
-                    <div class="team_img">
-                        <%= image_tag("team_2.jpg", class: "img-resposive")%>
-                    </div>
-                    <div class="team_txt">
-                        <h1><a href="#">Dra. Mariana Thomé</a></h1>
-                        <p>Pediatra</p>
-                    </div>
-                    <div class="team_icon_hover our_doc_icn_hovr">
-                        <ul>
-                            <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
-                            <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
-                            <li><a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
-                            <li><a href="#"><i class="fa fa-youtube-play" aria-hidden="true"></i></a></li>
-                        </ul>
-                    </div>
-                </div>
             </div>
-            <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
-                <div class="team_about">
-                    <div class="team_icon_wrapper">
-                        <i class="fa fa-user-md" style="top: 50px; left: 20px; position: absolute; font-size: 40px; color: #FFF"></i>
-                    </div>
-                    <div class="team_img">
-                        <%= image_tag("team_3.jpg", class: "img-resposive")%>
-                    </div>
-                    <div class="team_txt">
-                        <h1><a href="#">Dra. Mariana Thomé</a></h1>
-                        <p>Pediatra</p>
-                    </div>
-                    <div class="team_icon_hover our_doc_icn_hovr">
-                        <ul>
-                            <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
-                            <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
-                            <li><a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
-                            <li><a href="#"><i class="fa fa-youtube-play" aria-hidden="true"></i></a></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 hidden-xs hidden-sm">
-                <div class="team_about">
-                    <div class="team_icon_wrapper">
-                        <i class="fa fa-user-md" style="top: 50px; left: 20px; position: absolute; font-size: 40px; color: #FFF"></i>
-                    </div>
-                    <div class="team_img">
-                        <%= image_tag("team_4.jpg", class: "img-resposive")%>
-                    </div>
-                    <div class="team_txt">
-                        <h1><a href="#">Dra. Mariana Thomé</a></h1>
-                        <p>Pediatra</p>
-                    </div>
-                    <div class="team_icon_hover our_doc_icn_hovr">
-                        <ul>
-                            <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
-                            <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
-                            <li><a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
-                            <li><a href="#"><i class="fa fa-youtube-play" aria-hidden="true"></i></a></li>
-                            </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
     </div>
     </div>
 </div>

@@ -2,6 +2,7 @@ class PagesController < ApplicationController
     before_action :authenticate2_user!, only: [:medicadmin, :medicallarticles, :medicnewarticle]
     def index
         @artigos = Artigo.all
+        @users = User.all
     end
 
     def medicnewarticle

@@ -32,11 +32,19 @@
                             <li><i class="fa fa-envelope" aria-hidden="true"></i><a href="#"><span>&nbsp;</span> contato@espacomedicotere.com.br</a></li>
                         </ul>
                     </div>
+                    <% if current_user %>
                     <div class="top_login">
                         <ul>
-                            <li><i class="fa fa-sign-in" aria-hidden="true"></i><a href="#">Login / Registrar</a></li>
+                            <li><i class="fa fa-sign-in" aria-hidden="true"></i><a href="/medic/allarticles">Painel</a></li>
                         </ul>
                     </div>
+                    <% else %>
+                    <div class="top_login">
+                        <ul>
+                            <li><i class="fa fa-sign-in" aria-hidden="true"></i><a href="/login">Login / Registrar</a></li>
+                        </ul>
+                    </div>
+                    <% end %>
                 </div>
             </div>
         </div>
@@ -77,7 +85,7 @@
                                 </div>
                                 <ul class="nav navbar-nav" id="nav_filter">
 								 <li class="dropdown">
-									  <a href="/" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><b>Home</b></a>
+									  <a href="/"><b>Home</b></a>
 									</li>
                                     <li><a href="/sobre"><b>Sobre</b></a></li>
                                    <li class="dropdown">
@@ -86,7 +94,7 @@
 
 									</li>
                                    <li class="dropdown">
-									  <a href="/medicos" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><b>Equipe</b></a>
+									  <a href="/medicos"><b>Equipe</b></a>
 
 									</li>
                                     <li class="dropdown">
@@ -94,7 +102,7 @@
 
 									</li>
 									<li class="dropdown">
-									  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><b>Artigos</b></a>
+									  <a href="/artigos"><b>Artigos</b></a>
 
 									</li>
                                    <!-- <li class="dropdown">
