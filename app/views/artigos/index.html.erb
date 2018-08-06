@@ -19,52 +19,60 @@
         </div>
     </div>
     <!-- med_tittle_section End -->
+
 	<!--blog category section start-->
 	<div class="blog_section med_toppadder100 med_bottompadder100">
-	<div class="container">
-		<div class="row">
-			<div class="blog_category_main_wrapper">
-				<div class="col-lg-9 col-md-9 col-sm-12 col-xs-12">
-				<div class="row">
-				<% @artigos.each do |artigo| %>
-				  
-				
-					<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-						<div class="blog_about">
-							<div class="blog_img blog_post_img">
-								<figure>
-								    <%= cl_image_tag(artigo.cloudname, :width => 849, :height => 450) %>
-								</figure>
+        <div class="container">
+            <div class="row">
+                <div class="blog_category_main_wrapper">
+                    <div class="col-lg-9 col-md-9 col-sm-12 col-xs-12">
+                        <div class="row">
+                            <% if (@artigos.blank?) then %>              
+                                <div class="col-lg-8 col-md-12 col-sm-12 col-xs-12 col-lg-offset-2">
+                                    <b><i>Carregando artigos...</i></b>                     
+                                </div>
+                            <% else %> 
+                                <% @artigos.each do |artigo| %>
+                                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                        <div class="blog_about">
+                                            <div class="blog_img blog_post_img">
+                                                <figure>
+                                                    <%= cl_image_tag(artigo.cloudname, :width => 849, :height => 450) %>
+                                                </figure>
+                                        </div>
+                                        <div class="blog_comment">
+                                            <ul>
+                                                <li><a href=""><i class="fa fa-comment" aria-hidden="true"></i>50</a></li>
+                                            </ul>
+                                        </div>
+                                        <div class="blog_txt">
+                                            <h1><a href="#"><%= artigo.titulo %></a></h1>
+                                            <div class="blog_txt_info">
+                                                <ul>
+                                                    <li><%= artigo.user.nome %></li>
+                                                    <li><%= artigo.created_at.strftime('%d/%m/%Y') %></li>
+                                                </ul>
+                                            </div>
+                                            <p><%= truncate(artigo.texto, length: 350, omission: '...', escape: false) %></p>
+                                                <%= link_to 'Leia Mais', artigo %>						
+                                            </div>
+                                        </div>
+                                    </div>
+                                <% end %>
+                            <% end %>    
                         </div>
-                        <div class="blog_comment">
-                            <ul>
-                                <li><a href=""><i class="fa fa-comment" aria-hidden="true"></i>50</a></li>
-                            </ul>
-                        </div>
-                        <div class="blog_txt">
-                            <h1><a href="#"><%= artigo.titulo %></a></h1>
-                            <div class="blog_txt_info">
-                                <ul>
-                                    <li><%= artigo.user.nome %></li>
-                                    <li><%= artigo.created_at.strftime('%d/%m/%Y') %></li>
-                                </ul>
-                            </div>
-                            <p><%= truncate(artigo.texto, length: 350, omission: '...', escape: false) %></p>
-								<%= link_to 'Leia Mais', artigo %>						
-	                        </div>
-						</div>
-					</div>
-					<% end %>
-				</div>
-				</div>
-				<div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
-				<div class="row">
-					<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                       <div class="contect_form_blog">
-                        <input type="text" placeholder="pesquisar"><a href=""><i class="fa fa-search" aria-hidden="true"></i></a>
-                       </div>
                     </div>
-				</div>
-			</div>
-		</div>
+                    <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
+                        <div class="row">
+                            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                <div class="contect_form_blog">
+                                    <input type="text" placeholder="pesquisar"><a href=""><i class="fa fa-search" aria-hidden="true"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 	<!--blog category section end-->
