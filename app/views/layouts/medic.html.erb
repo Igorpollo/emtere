@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Emtere</title>
+    <title>Admin | Espaço Médico</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
     <link rel="stylesheet" media="all" href="https://getbootstrap.com/docs/4.1/dist/css/bootstrap.min.css">
@@ -20,7 +20,7 @@
             <a class="nav-link" href="/medic/newarticle">Novo Artigo</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link disabled" href="#">Meus perfil</a>
+            <a class="nav-link" href="/users/edit">Meu perfil</a>
           </li>
           <li class="nav-item">
             <%= link_to('Logout', destroy_user_session_path, method: :delete, class:'nav-link') %>        
