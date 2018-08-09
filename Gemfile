@@ -9,6 +9,7 @@ gem 'rails', '~> 5.2.0'
 gem 'pg'
 
 gem 'devise'
+gem 'activeadmin'
 gem 'mini_magick'
 gem 'ckeditor', github: 'galetahub/ckeditor'
 gem 'friendly_id', '~> 5.1.0'
