@@ -9,6 +9,11 @@ class ApplicationController < ActionController::Base
       "medic"
     end
   end
+
+  def set_admin_locale
+    I18n.locale = :pt-BR
+  end  
+
   def after_sign_in_path_for(resource)
     request.env['omniauth.origin'] || stored_location_for(resource) || medic_path
   end

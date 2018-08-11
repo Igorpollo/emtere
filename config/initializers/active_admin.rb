@@ -185,7 +185,7 @@ ActiveAdmin.setup do |config|
   # resources or you can enable them globally from here.
   #
   # config.create_another = true
-
+  config.before_action :set_admin_locale
   # == Register Stylesheets & Javascripts
   #
   # We recommend using the built in Active Admin layout and loading
