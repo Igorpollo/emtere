@@ -11,7 +11,7 @@ class ApplicationController < ActionController::Base
   end
 
   def set_admin_locale
-    I18n.locale = :pt-BR
+    I18n.locale = 'pt-BR'
   end  
 
   def after_sign_in_path_for(resource)
