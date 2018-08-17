@@ -1,10 +1,18 @@
 ActiveAdmin.setup do |config|
+
+  # == Friendly Id addon
+  ActiveAdmin::ResourceController.class_eval do
+    def find_resource
+      resource_class.is_a?(FriendlyId) ? scoped_collection.friendly.find(params[:id]) : scoped_collection.find(params[:id])
+    end
+  end
+  
   # == Site Title
   #
   # Set the title that is displayed on the main layout
   # for each of the active admin pages.
   #
-  config.site_title = "Emtere"
+  config.site_title = "Espaço Medico Tere"
 
   # Set the link url for the title. For example, to take
   # users to your main site. Defaults to no link.
@@ -290,4 +298,6 @@ ActiveAdmin.setup do |config|
   # You can inherit it with own class and inject it for all resources
   #
   # config.order_clause = MyOrderClause
+
+  
 end
