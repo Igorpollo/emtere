@@ -13,7 +13,7 @@ gem 'activeadmin'
 gem 'mini_magick'
 gem 'ckeditor', github: 'galetahub/ckeditor'
 gem 'friendly_id', '~> 5.1.0'
-gem 'carrierwave', '~> 1.0'
+gem 'carrierwave', '~> 2.2'
 gem 'cloudinary'
 
 
